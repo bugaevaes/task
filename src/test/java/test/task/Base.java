@@ -21,6 +21,7 @@ public class Base {
         ChromeDriverManager.getInstance().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
     }
 
     @AfterClass(alwaysRun = true)
